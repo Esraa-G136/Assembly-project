@@ -3,7 +3,7 @@
 .model small
 .data
  arr db 1,2,4,0,5,8,9
- msg1 db  "The array of elements we have is :1,2,4,0,5,8,9 ","$"
+ msg1 db  "The array of elements we have is :0,1,2,4,5,8,9 ","$"
  msg2 db  "if the result is 1 it means the element is 'found' and 0 is for 'notfound'  ","$"
  msg3 db  "Emter the element you search for  ","$"
  line db 0dh,0ah ,"$"

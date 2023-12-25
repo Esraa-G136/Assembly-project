@@ -5,7 +5,7 @@
  arr db 1,2,4,0,5,8,9
  msg1 db  "The array of elements we have is :0,1,2,4,5,8,9 ","$"
  msg2 db  "if the result is 1 it means the element is 'found' and 0 is for 'notfound'  ","$"
- msg3 db  "Emter the element you search for  ","$"
+ msg3 db  "Enter the element you search for  ","$"
  line db 0dh,0ah ,"$"
  target db ?
  result db ?
@@ -44,7 +44,7 @@
  mov si, 0
  mov di, 6
     
- call binarysearch
+ call BinarySearch
 
  ; Display the result
  
@@ -61,7 +61,7 @@
  main endp
  
  
- binarysearch proc near
+ BinarySearch proc near
  ; Binary Search Algorithm
  
  while_loop:
@@ -88,8 +88,8 @@
     ret
 
     less_than_target:
-    inc arr[bx]   ; Move to the right half
-    mov si , word ptr arr[bx]
+    mov si , bx  ; Move to the right half
+    inc si  
     jmp while_loop
 
     greater_than_target:

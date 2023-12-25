@@ -81,12 +81,8 @@
     je found
     jb less_than_target ; if array[mid] < target, search right half
     ja greater_than_target ; if array[mid] > target, search left half
+        
     
-    
-    found:
-    mov result,1
-    ret
-
     less_than_target:
     mov si , bx  ; Move to the right half
     inc si  
@@ -100,6 +96,11 @@
     done:
     mov result,0
     ret
+
+    found:
+    mov result,1
+    ret
+
 BinarySearch endp
 
 newline proc near 

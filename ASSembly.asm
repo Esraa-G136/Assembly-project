@@ -93,7 +93,8 @@
     jmp while_loop
 
     greater_than_target:
-    dec di ; Move to the left half
+    mov di, bx   ; Move to the left half
+    dec di 
     jmp while_loop
 
     done:

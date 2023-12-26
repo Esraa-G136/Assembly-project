@@ -59,7 +59,326 @@
  
  .exit
  main endp
- 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+ drawsquare proc near
+;display video mode
+mov ah,0
+mov al,13h
+int 10h
+
+;position and color
+mov ah,0ch
+mov al,10
+mov cx ,10
+mov dx,50
+int 21h
+
+
+;the length
+mov bl,20
+;first horizontal line
+_1:
+int 10h
+inc cx
+dec bl
+jnz _1
+
+;the lenth
+mov bl,20
+;first vertical line
+_2:
+int 10h
+inc dx
+dec bl
+jnz _2
+
+;the lenth
+mov bl,20
+;second horizontal line
+_3:
+int 10h
+dec cx
+dec bl
+jnz _3
+
+;the lenth
+mov bl,20
+;second vertical line
+_4:
+int 10h
+dec dx
+dec bl
+jnz _4
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;the 2 square
+
+mov cx ,30
+mov dx,50
+
+;the lenth
+mov bl,20
+;first horizontal line
+_1x2:
+int 10h
+inc cx
+dec bl
+jnz _1x2
+
+;the lenth
+mov bl,20
+;first vertical line
+_2x2:
+int 10h
+inc dx
+dec bl
+jnz _2x2
+
+;the lenth
+mov bl,20
+;second horizontal line
+_3x2:
+int 10h
+dec cx
+dec bl
+jnz _3x2
+
+;the lenth
+mov bl,20
+;second vertical line
+_4x2:
+int 10h
+dec dx
+dec bl
+jnz _4x2
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+;the 3 square
+
+mov cx ,50
+mov dx,50
+
+;the lenth
+mov bl,20
+;first horizontal line
+_1x3:
+int 10h
+inc cx
+dec bl
+jnz _1x3
+
+;the lenth
+mov bl,20
+;first vertical line
+_2x3:
+int 10h
+inc dx
+dec bl
+jnz _2x3
+
+;the lenth
+mov bl,20
+;second horizontal line
+_3x3:
+int 10h
+dec cx
+dec bl
+jnz _3x3
+
+;the lenth
+mov bl,20
+;second vertical line
+_4x3:
+int 10h
+dec dx
+dec bl
+jnz _4x3
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+;the 4 square
+
+mov cx ,70
+mov dx,50
+
+;the lenth
+mov bl,20
+;first horizental line
+_1x4:
+int 10h
+inc cx
+dec bl
+jnz _1x4
+
+;the lenth
+mov bl,20
+;first vertical line
+_2x4:
+int 10h
+inc dx
+dec bl
+jnz _2x4
+
+;the lenth
+mov bl,20
+;second horizental line
+_3x4:
+int 10h
+dec cx
+dec bl
+jnz _3x4
+
+;the lenth
+mov bl,20
+;second vertical line
+_4x4:
+int 10h
+dec dx
+dec bl
+jnz _4x4
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+;the 5 square
+
+mov cx ,90
+mov dx,50
+
+;the lenth
+mov bl,20
+;first horizental line
+_1x5:
+int 10h
+inc cx
+dec bl
+jnz _1x5
+
+;the lenth
+mov bl,20
+;first vertical line
+_2x5:
+int 10h
+inc dx
+dec bl
+jnz _2x5
+
+;the lenth
+mov bl,20
+;second horizental line
+_3x5:
+int 10h
+dec cx
+dec bl
+jnz _3x5
+
+;the lenth
+mov bl,20
+;second vertical line
+_4x5:
+int 10h
+dec dx
+dec bl
+jnz _4x5
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+;the 6 square
+
+mov cx ,110
+mov dx,50
+
+;the lenth
+mov bl,20
+;first horizental line
+_1x6:
+int 10h
+inc cx
+dec bl
+jnz _1x6
+
+;the lenth
+mov bl,20
+;first vertical line
+_2x6:
+int 10h
+inc dx
+dec bl
+jnz _2x6
+
+;the lenth
+mov bl,20
+;second horizental line
+_3x6:
+int 10h
+dec cx
+dec bl
+jnz _3x6
+
+;the lenth
+mov bl,20
+;second vertical line
+_4x6:
+int 10h
+dec dx
+dec bl
+jnz _4x6
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+;the 7 square
+
+mov cx ,130
+mov dx,50
+
+;the lenth
+mov bl,20
+;first horizental line
+_1x7:
+int 10h
+inc cx
+dec bl
+jnz _1x7
+
+;the lenth
+mov bl,20
+;first vertical line
+_2x7:
+int 10h
+inc dx
+dec bl
+jnz _2x7
+
+;the lenth
+mov bl,20
+;second horizental line
+_3x7:
+int 10h
+dec cx
+dec bl
+jnz _3x7
+
+;the lenth
+mov bl,20
+;second vertical line
+_4x7:
+int 10h
+dec dx
+dec bl
+jnz _4x7
+
+
+ret
+
+drawsquare endp
+ ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
  
  BinarySearch proc near
  ; Binary Search Algorithm
@@ -102,7 +421,7 @@
     ret
 
 BinarySearch endp
-
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 newline proc near 
     lea dx,line
     mov ah,09h
